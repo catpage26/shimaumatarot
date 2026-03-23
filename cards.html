@@ -3,18 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>タロットカード78枚の意味一覧【正位置・逆位置】| しまうまタロット</title>
-  <meta name="description" content="タロットカード全78枚（大アルカナ22枚・小アルカナ56枚）の意味を正位置・逆位置で詳しく解説。キーワードとアドバイス付き。しまうまタロットがやさしくお伝えします。">
-  <meta name="keywords" content="タロットカード,意味,一覧,大アルカナ,小アルカナ,正位置,逆位置,ワンド,カップ,ソード,ペンタクル">
-  <meta property="og:title" content="タロットカード78枚の意味一覧 | しまうまタロット">
-  <meta property="og:description" content="全78枚のタロットカードの意味を正位置・逆位置で詳しく解説。">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://catpage26.github.io/shimaumatarot/ogp.jpg">
-  <meta property="og:url" content="https://catpage26.github.io/shimaumatarot/cards.html">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://catpage26.github.io/shimaumatarot/ogp.jpg">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>タロットカード78枚の意味一覧【イラスト付き】| しまうまタロット</title>
+  <meta name="description" content="タロットカード全78枚（大アルカナ22枚・小アルカナ56枚）の意味を正位置・逆位置で詳しく解説。ウェイト=スミス版イラスト付き。しまうまタロットがやさしくお伝えします。">
+  <meta name="keywords" content="タロットカード,意味,一覧,大アルカナ,小アルカナ,正位置,逆位置,ワンド,カップ,ソード,ペンタクル,イラスト">
   <link rel="canonical" href="https://catpage26.github.io/shimaumatarot/cards.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="タロット占い｜しまうまタロット">
+  <meta property="og:title" content="タロットカード78枚の意味一覧【イラスト付き】| しまうまタロット">
+  <meta property="og:description" content="全78枚のタロットカードの意味を正位置・逆位置で詳しく解説。ウェイト=スミス版イラスト付き。">
+  <meta property="og:url" content="https://catpage26.github.io/shimaumatarot/cards.html">
+  <meta property="og:image" content="https://catpage26.github.io/shimaumatarot/ogp.jpg">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="タロットカード78枚の意味一覧 | しまうまタロット">
+  <meta name="twitter:image" content="https://catpage26.github.io/shimaumatarot/ogp.jpg">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "タロットカード78枚の意味一覧", "description": "タロットカード全78枚の意味を正位置・逆位置で詳しく解説。ウェイト=スミス版イラスト付き。", "url": "https://catpage26.github.io/shimaumatarot/cards.html", "publisher": {"@type": "Organization", "name": "しまうまタロット"}, "numberOfItems": 78}</script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap');
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -35,58 +38,37 @@
     .section-title { text-align: center; font-size: 20px; font-weight: 700; color: #7b1fa2; margin: 40px 0 24px; padding: 16px; background: rgba(255,255,255,0.5); border-radius: 16px; border: 1px solid rgba(206,147,216,0.2); }
     .section-title .section-emoji { font-size: 28px; display: block; margin-bottom: 4px; }
     .section-subtitle { font-size: 13px; color: #b39dba; font-weight: 400; margin-top: 4px; }
-    .card-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
-    .card-item { background: rgba(255,255,255,0.75); backdrop-filter: blur(10px); border-radius: 20px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 16px rgba(179,136,200,0.1); overflow: hidden; transition: box-shadow 0.2s; }
-    .card-item:hover { box-shadow: 0 6px 24px rgba(179,136,200,0.2); }
-    .card-header { display: flex; align-items: center; gap: 12px; padding: 16px 20px; cursor: pointer; user-select: none; }
-    .card-header:hover { background: rgba(206,147,216,0.05); }
-    .card-icon { font-size: 32px; flex-shrink: 0; }
-    .card-info { flex: 1; }
-    .card-title { font-size: 16px; font-weight: 700; color: #7b1fa2; }
-    .card-title-en { font-size: 11px; color: #b39dba; letter-spacing: 0.5px; }
-    .card-toggle { font-size: 18px; color: #ce93d8; transition: transform 0.3s; flex-shrink: 0; }
-    .card-item.open .card-toggle { transform: rotate(180deg); }
-    .card-detail { display: none; padding: 0 20px 20px; }
-    .card-item.open .card-detail { display: block; }
-    .position-block { margin-bottom: 16px; padding: 16px; border-radius: 12px; }
-    .position-block.upright { background: linear-gradient(135deg, rgba(248,187,208,0.15), rgba(225,190,231,0.15)); border-left: 4px solid #f48fb1; }
-    .position-block.reversed { background: linear-gradient(135deg, rgba(159,168,218,0.15), rgba(179,157,219,0.15)); border-left: 4px solid #9fa8da; }
-    .position-label { display: inline-block; padding: 3px 12px; border-radius: 12px; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
-    .upright .position-label { background: #f48fb1; color: #fff; }
-    .reversed .position-label { background: #9fa8da; color: #fff; }
-    .keyword { font-size: 14px; font-weight: 700; color: #7b1fa2; margin-bottom: 6px; }
-    .meaning { font-size: 14px; line-height: 1.9; color: #5c4a6b; margin-bottom: 6px; }
-    .advice { font-size: 13px; line-height: 1.8; color: #8e6c9e; padding-left: 12px; border-left: 2px solid rgba(206,147,216,0.3); }
-    .ad-space { margin: 40px 0; padding: 28px 24px; background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); border-radius: 20px; border: 1px solid rgba(206,147,216,0.2); text-align: center; box-shadow: 0 4px 16px rgba(179,136,200,0.08); }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 16px; }
+    .card-link { display: block; background: rgba(255,255,255,0.75); backdrop-filter: blur(10px); border-radius: 16px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 16px rgba(179,136,200,0.1); overflow: hidden; text-decoration: none; color: #5c4a6b; transition: all 0.2s; text-align: center; padding: 12px 8px; }
+    .card-link:hover { box-shadow: 0 8px 28px rgba(179,136,200,0.25); transform: translateY(-3px); border-color: #ce93d8; }
+    .card-link img { width: 100%; max-width: 120px; height: auto; border-radius: 10px; margin-bottom: 8px; }
+    .card-link .card-name { font-size: 13px; font-weight: 700; color: #7b1fa2; line-height: 1.4; }
+    .card-link .card-name-en { font-size: 10px; color: #b39dba; margin-top: 2px; }
+    .section-nav { display: flex; justify-content: center; gap: 12px; margin: 24px 0; flex-wrap: wrap; }
+    .section-nav a { padding: 8px 18px; background: rgba(255,255,255,0.7); backdrop-filter: blur(8px); border-radius: 16px; text-decoration: none; color: #8e6c9e; font-size: 13px; font-weight: 500; border: 1px solid rgba(206,147,216,0.3); transition: all 0.2s; }
+    .section-nav a:hover { background: linear-gradient(135deg, #e891b9, #b388cb); color: #fff; border-color: transparent; }
+    .ad-space { margin: 32px 0; padding: 24px; background: rgba(255,255,255,0.6); backdrop-filter: blur(8px); border-radius: 20px; border: 1px solid rgba(206,147,216,0.2); text-align: center; }
     .ad-label { display: inline-block; font-size: 11px; font-weight: 700; color: #b39dba; border: 1px solid #d4c1de; border-radius: 4px; padding: 1px 8px; margin-bottom: 8px; }
     .ad-heading { font-size: 15px; font-weight: 700; color: #8e6c9e; margin-bottom: 4px; }
     .ad-desc { font-size: 13px; color: #b39dba; margin-bottom: 16px; }
-    .btn-affiliate { display: inline-block; padding: 14px 28px; background: linear-gradient(135deg, #e891b9 0%, #b388cb 50%, #9fa8da 100%); color: #fff; text-decoration: none; border-radius: 16px; font-family: inherit; font-size: 14px; font-weight: 700; letter-spacing: 0.5px; box-shadow: 0 4px 16px rgba(179,136,203,0.3); transition: transform 0.2s, box-shadow 0.2s; }
+    .btn-affiliate { display: inline-block; padding: 14px 28px; background: linear-gradient(135deg, #e891b9 0%, #b388cb 50%, #9fa8da 100%); color: #fff; text-decoration: none; border-radius: 16px; font-family: inherit; font-size: 14px; font-weight: 700; box-shadow: 0 4px 16px rgba(179,136,203,0.3); transition: transform 0.2s, box-shadow 0.2s; }
     .btn-affiliate:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(179,136,203,0.4); }
-    .adsense-slot { margin: 32px 0; min-height: 100px; display: flex; align-items: center; justify-content: center; }
+    .ad-coupon { font-size: 12px; color: #e891b9; margin-top: 12px; font-weight: 500; }
     .footer { text-align: center; margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(206,147,216,0.2); }
     .footer p { font-size: 12px; color: #c9b3d4; line-height: 1.8; }
     .footer a { color: #b388cb; text-decoration: none; }
     .back-to-top { position: fixed; bottom: 24px; right: 24px; width: 48px; height: 48px; background: linear-gradient(135deg, #e891b9, #b388cb); color: #fff; border: none; border-radius: 50%; font-size: 20px; cursor: pointer; box-shadow: 0 4px 16px rgba(179,136,203,0.4); display: none; align-items: center; justify-content: center; z-index: 100; transition: transform 0.2s; }
     .back-to-top:hover { transform: scale(1.1); }
     .back-to-top.visible { display: flex; }
-    .expand-controls { display: flex; justify-content: center; gap: 12px; margin-bottom: 20px; }
-    .expand-btn { padding: 8px 20px; background: rgba(255,255,255,0.7); border: 1px solid rgba(206,147,216,0.3); border-radius: 16px; color: #8e6c9e; font-family: inherit; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s; }
-    .expand-btn:hover { background: rgba(255,255,255,0.95); border-color: #ce93d8; }
-    .section-nav { display: flex; justify-content: center; gap: 12px; margin: 24px 0; flex-wrap: wrap; }
-    .section-nav a { padding: 8px 18px; background: rgba(255,255,255,0.7); backdrop-filter: blur(8px); border-radius: 16px; text-decoration: none; color: #8e6c9e; font-size: 13px; font-weight: 500; border: 1px solid rgba(206,147,216,0.3); transition: all 0.2s; }
-    .section-nav a:hover { background: linear-gradient(135deg, #e891b9, #b388cb); color: #fff; border-color: transparent; transform: translateY(-1px); box-shadow: 0 2px 8px rgba(179,136,203,0.3); }
-    .bottom-nav { display: flex; justify-content: center; gap: 12px; margin: 32px 0 16px; flex-wrap: wrap; }
-    .bottom-nav a { padding: 10px 20px; background: rgba(255,255,255,0.7); backdrop-filter: blur(8px); border-radius: 20px; text-decoration: none; color: #8e6c9e; font-weight: 500; font-size: 14px; border: 1px solid rgba(206,147,216,0.3); transition: all 0.2s; }
-    .bottom-nav a:hover { background: linear-gradient(135deg, #e891b9, #b388cb); color: #fff; border-color: transparent; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(179,136,203,0.3); }
-    @media (max-width: 480px) { .container { padding: 16px 12px 40px; } .header h1 { font-size: 18px; } .section-title { font-size: 17px; } .card-header { padding: 14px 16px; } .card-detail { padding: 0 16px 16px; } .position-block { padding: 12px; } }
+    @media (max-width: 480px) { .container { padding: 16px 12px 40px; } .header h1 { font-size: 18px; } .section-title { font-size: 17px; } .card-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 10px; } .card-link { padding: 8px 6px; } .card-link .card-name { font-size: 11px; } }
   </style>
 </head>
 <body>
   <div class="container">
     <nav class="nav">
-      <a href="index.html">🔮 無料タロット鑑定</a>
-      <a href="cards.html" class="active">📖 カード意味一覧</a>
+      <a href="index.html">🔮 タロット占い</a>
+      <a href="https://catpage26.github.io/otegami/">💌 おてがみオラクル</a>
+      <a href="cards.html" class="active">📖 カード一覧</a>
     </nav>
     <header class="header">
       <span class="header-emoji">📖</span>
@@ -100,62 +82,454 @@
       <a href="#swords">💨 ソード</a>
       <a href="#pentacles">🌿 ペンタクル</a>
     </div>
-    <div class="expand-controls">
-      <button class="expand-btn" onclick="expandAll()">すべて開く</button>
-      <button class="expand-btn" onclick="collapseAll()">すべて閉じる</button>
+    <div id="major">
+      <h2 class="section-title"><span class="section-emoji">🌟</span>大アルカナ<div class="section-subtitle">Major Arcana（22枚）</div></h2>
+      <div class="card-grid">
+        <a href="cards/fool.html" class="card-link">
+          <img src="tarot_images_web/major_arcana_fool.jpg" alt="愚者" loading="lazy">
+          <div class="card-name">0. 愚者</div>
+          <div class="card-name-en">The Fool</div>
+        </a>
+        <a href="cards/magician.html" class="card-link">
+          <img src="tarot_images_web/major_arcana_magician.jpg" alt="魔術師" loading="lazy">
+          <div class="card-name">1. 魔術師</div>
+          <div class="card-name-en">The Magician</div>
+        </a>
+        <a href="cards/priestess.html" class="card-link">
+          <img src="tarot_images_web/major_arcana_priestess.jpg" alt="女教皇" loading="lazy">
+          <div class="card-name">2. 女教皇</div>
+          <div class="card-name-en">The High Priestess</div>
+        </a>
+        <a href="cards/empress.html" class="card-link">
+          <img src="tarot_images_web/major_arcana_empress.jpg" alt="女帝" loading="lazy">
+          <div class="card-name">3. 女帝</div>
+          <div class="card-name-en">The Empress</div>
+        </a>
+        <a href="cards/emperor.html" class="card-link">
+          <img src="tarot_images_web/major_arcana_emperor.jpg" alt="皇帝" loading="lazy">
+          <div class="card-name">4. 皇帝</div>
+          <div class="card-name-en">The Emperor</div>
+        </a>
+        <a href="cards/hierophant.html" class="card-link">
+          <img src="tarot_images_web/major_arcana_hierophant.jpg" alt="教皇" loading="lazy">
+          <div class="card-name">5. 教皇</div>
+          <div class="card-name-en">The Hierophant</div>
+        </a>
+        <a href="cards/lovers.html" class="card-link">
+          <img src="tarot_images_web/major_arcana_lovers.jpg" alt="恋人" loading="lazy">
+          <div class="card-name">6. 恋人</div>
+          <div class="card-name-en">The Lovers</div>
+        </a>
+        <a href="cards/chariot.html" class="card-link">
+          <img src="tarot_images_web/major_arcana_chariot.jpg" alt="戦車" loading="lazy">
+          <div class="card-name">7. 戦車</div>
+          <div class="card-name-en">The Chariot</div>
+        </a>
+        <a href="cards/strength.html" class="card-link">
+          <img src="tarot_images_web/major_arcana_strength.jpg" alt="力" loading="lazy">
+          <div class="card-name">8. 力</div>
+          <div class="card-name-en">Strength</div>
+        </a>
+        <a href="cards/hermit.html" class="card-link">
+          <img src="tarot_images_web/major_arcana_hermit.jpg" alt="隠者" loading="lazy">
+          <div class="card-name">9. 隠者</div>
+          <div class="card-name-en">The Hermit</div>
+        </a>
+        <a href="cards/fortune.html" class="card-link">
+          <img src="tarot_images_web/major_arcana_fortune.jpg" alt="運命の輪" loading="lazy">
+          <div class="card-name">10. 運命の輪</div>
+          <div class="card-name-en">Wheel of Fortune</div>
+        </a>
+        <a href="cards/justice.html" class="card-link">
+          <img src="tarot_images_web/major_arcana_justice.jpg" alt="正義" loading="lazy">
+          <div class="card-name">11. 正義</div>
+          <div class="card-name-en">Justice</div>
+        </a>
+        <a href="cards/hanged.html" class="card-link">
+          <img src="tarot_images_web/major_arcana_hanged.jpg" alt="吊るされた男" loading="lazy">
+          <div class="card-name">12. 吊るされた男</div>
+          <div class="card-name-en">The Hanged Man</div>
+        </a>
+        <a href="cards/death.html" class="card-link">
+          <img src="tarot_images_web/major_arcana_death.jpg" alt="死神" loading="lazy">
+          <div class="card-name">13. 死神</div>
+          <div class="card-name-en">Death</div>
+        </a>
+        <a href="cards/temperance.html" class="card-link">
+          <img src="tarot_images_web/major_arcana_temperance.jpg" alt="節制" loading="lazy">
+          <div class="card-name">14. 節制</div>
+          <div class="card-name-en">Temperance</div>
+        </a>
+        <a href="cards/devil.html" class="card-link">
+          <img src="tarot_images_web/major_arcana_devil.jpg" alt="悪魔" loading="lazy">
+          <div class="card-name">15. 悪魔</div>
+          <div class="card-name-en">The Devil</div>
+        </a>
+        <a href="cards/tower.html" class="card-link">
+          <img src="tarot_images_web/major_arcana_tower.jpg" alt="塔" loading="lazy">
+          <div class="card-name">16. 塔</div>
+          <div class="card-name-en">The Tower</div>
+        </a>
+        <a href="cards/star.html" class="card-link">
+          <img src="tarot_images_web/major_arcana_star.jpg" alt="星" loading="lazy">
+          <div class="card-name">17. 星</div>
+          <div class="card-name-en">The Star</div>
+        </a>
+        <a href="cards/moon.html" class="card-link">
+          <img src="tarot_images_web/major_arcana_moon.jpg" alt="月" loading="lazy">
+          <div class="card-name">18. 月</div>
+          <div class="card-name-en">The Moon</div>
+        </a>
+        <a href="cards/sun.html" class="card-link">
+          <img src="tarot_images_web/major_arcana_sun.jpg" alt="太陽" loading="lazy">
+          <div class="card-name">19. 太陽</div>
+          <div class="card-name-en">The Sun</div>
+        </a>
+        <a href="cards/judgement.html" class="card-link">
+          <img src="tarot_images_web/major_arcana_judgement.jpg" alt="審判" loading="lazy">
+          <div class="card-name">20. 審判</div>
+          <div class="card-name-en">Judgement</div>
+        </a>
+        <a href="cards/world.html" class="card-link">
+          <img src="tarot_images_web/major_arcana_world.jpg" alt="世界" loading="lazy">
+          <div class="card-name">21. 世界</div>
+          <div class="card-name-en">The World</div>
+        </a>
+      </div>
     </div>
-    <div class="adsense-slot" id="ad-top"></div>
-    <div id="cards-container"></div>
-    <div class="bottom-nav">
+    <div class="section-nav">
       <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ ページトップ</a>
       <a href="index.html">🔮 無料タロット鑑定</a>
-      <a href="https://coconala.com/users/3772034" target="_blank" rel="noopener">🔮 個人鑑定はこちら</a>
     </div>
+    <div id="wands">
+      <h2 class="section-title"><span class="section-emoji">🔥</span>ワンド（棒）<div class="section-subtitle">Wands（14枚）</div></h2>
+      <div class="card-grid">
+        <a href="cards/wands_ace.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_wands_ace.jpg" alt="ワンドのエース" loading="lazy">
+          <div class="card-name">ワンドのエース</div>
+          <div class="card-name-en">Ace of Wands</div>
+        </a>
+        <a href="cards/wands_2.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_wands_2.jpg" alt="ワンドの2" loading="lazy">
+          <div class="card-name">ワンドの2</div>
+          <div class="card-name-en">Two of Wands</div>
+        </a>
+        <a href="cards/wands_3.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_wands_3.jpg" alt="ワンドの3" loading="lazy">
+          <div class="card-name">ワンドの3</div>
+          <div class="card-name-en">Three of Wands</div>
+        </a>
+        <a href="cards/wands_4.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_wands_4.jpg" alt="ワンドの4" loading="lazy">
+          <div class="card-name">ワンドの4</div>
+          <div class="card-name-en">Four of Wands</div>
+        </a>
+        <a href="cards/wands_5.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_wands_5.jpg" alt="ワンドの5" loading="lazy">
+          <div class="card-name">ワンドの5</div>
+          <div class="card-name-en">Five of Wands</div>
+        </a>
+        <a href="cards/wands_6.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_wands_6.jpg" alt="ワンドの6" loading="lazy">
+          <div class="card-name">ワンドの6</div>
+          <div class="card-name-en">Six of Wands</div>
+        </a>
+        <a href="cards/wands_7.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_wands_7.jpg" alt="ワンドの7" loading="lazy">
+          <div class="card-name">ワンドの7</div>
+          <div class="card-name-en">Seven of Wands</div>
+        </a>
+        <a href="cards/wands_8.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_wands_8.jpg" alt="ワンドの8" loading="lazy">
+          <div class="card-name">ワンドの8</div>
+          <div class="card-name-en">Eight of Wands</div>
+        </a>
+        <a href="cards/wands_9.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_wands_9.jpg" alt="ワンドの9" loading="lazy">
+          <div class="card-name">ワンドの9</div>
+          <div class="card-name-en">Nine of Wands</div>
+        </a>
+        <a href="cards/wands_10.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_wands_10.jpg" alt="ワンドの10" loading="lazy">
+          <div class="card-name">ワンドの10</div>
+          <div class="card-name-en">Ten of Wands</div>
+        </a>
+        <a href="cards/wands_page.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_wands_page.jpg" alt="ワンドのペイジ" loading="lazy">
+          <div class="card-name">ワンドのペイジ</div>
+          <div class="card-name-en">Page of Wands</div>
+        </a>
+        <a href="cards/wands_knight.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_wands_knight.jpg" alt="ワンドのナイト" loading="lazy">
+          <div class="card-name">ワンドのナイト</div>
+          <div class="card-name-en">Knight of Wands</div>
+        </a>
+        <a href="cards/wands_queen.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_wands_queen.jpg" alt="ワンドのクイーン" loading="lazy">
+          <div class="card-name">ワンドのクイーン</div>
+          <div class="card-name-en">Queen of Wands</div>
+        </a>
+        <a href="cards/wands_king.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_wands_king.jpg" alt="ワンドのキング" loading="lazy">
+          <div class="card-name">ワンドのキング</div>
+          <div class="card-name-en">King of Wands</div>
+        </a>
+      </div>
+    </div>
+    <div class="section-nav">
+      <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ ページトップ</a>
+      <a href="index.html">🔮 無料タロット鑑定</a>
+    </div>
+    <div id="cups">
+      <h2 class="section-title"><span class="section-emoji">💧</span>カップ（聖杯）<div class="section-subtitle">Cups（14枚）</div></h2>
+      <div class="card-grid">
+        <a href="cards/cups_ace.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_cups_ace.jpg" alt="カップのエース" loading="lazy">
+          <div class="card-name">カップのエース</div>
+          <div class="card-name-en">Ace of Cups</div>
+        </a>
+        <a href="cards/cups_2.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_cups_2.jpg" alt="カップの2" loading="lazy">
+          <div class="card-name">カップの2</div>
+          <div class="card-name-en">Two of Cups</div>
+        </a>
+        <a href="cards/cups_3.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_cups_3.jpg" alt="カップの3" loading="lazy">
+          <div class="card-name">カップの3</div>
+          <div class="card-name-en">Three of Cups</div>
+        </a>
+        <a href="cards/cups_4.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_cups_4.jpg" alt="カップの4" loading="lazy">
+          <div class="card-name">カップの4</div>
+          <div class="card-name-en">Four of Cups</div>
+        </a>
+        <a href="cards/cups_5.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_cups_5.jpg" alt="カップの5" loading="lazy">
+          <div class="card-name">カップの5</div>
+          <div class="card-name-en">Five of Cups</div>
+        </a>
+        <a href="cards/cups_6.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_cups_6.jpg" alt="カップの6" loading="lazy">
+          <div class="card-name">カップの6</div>
+          <div class="card-name-en">Six of Cups</div>
+        </a>
+        <a href="cards/cups_7.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_cups_7.jpg" alt="カップの7" loading="lazy">
+          <div class="card-name">カップの7</div>
+          <div class="card-name-en">Seven of Cups</div>
+        </a>
+        <a href="cards/cups_8.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_cups_8.jpg" alt="カップの8" loading="lazy">
+          <div class="card-name">カップの8</div>
+          <div class="card-name-en">Eight of Cups</div>
+        </a>
+        <a href="cards/cups_9.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_cups_9.jpg" alt="カップの9" loading="lazy">
+          <div class="card-name">カップの9</div>
+          <div class="card-name-en">Nine of Cups</div>
+        </a>
+        <a href="cards/cups_10.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_cups_10.jpg" alt="カップの10" loading="lazy">
+          <div class="card-name">カップの10</div>
+          <div class="card-name-en">Ten of Cups</div>
+        </a>
+        <a href="cards/cups_page.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_cups_page.jpg" alt="カップのペイジ" loading="lazy">
+          <div class="card-name">カップのペイジ</div>
+          <div class="card-name-en">Page of Cups</div>
+        </a>
+        <a href="cards/cups_knight.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_cups_knight.jpg" alt="カップのナイト" loading="lazy">
+          <div class="card-name">カップのナイト</div>
+          <div class="card-name-en">Knight of Cups</div>
+        </a>
+        <a href="cards/cups_queen.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_cups_queen.jpg" alt="カップのクイーン" loading="lazy">
+          <div class="card-name">カップのクイーン</div>
+          <div class="card-name-en">Queen of Cups</div>
+        </a>
+        <a href="cards/cups_king.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_cups_king.jpg" alt="カップのキング" loading="lazy">
+          <div class="card-name">カップのキング</div>
+          <div class="card-name-en">King of Cups</div>
+        </a>
+      </div>
+    </div>
+    <div class="section-nav">
+      <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ ページトップ</a>
+      <a href="index.html">🔮 無料タロット鑑定</a>
+    </div>
+    <div id="swords">
+      <h2 class="section-title"><span class="section-emoji">💨</span>ソード（剣）<div class="section-subtitle">Swords（14枚）</div></h2>
+      <div class="card-grid">
+        <a href="cards/swords_ace.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_swords_ace.jpg" alt="ソードのエース" loading="lazy">
+          <div class="card-name">ソードのエース</div>
+          <div class="card-name-en">Ace of Swords</div>
+        </a>
+        <a href="cards/swords_2.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_swords_2.jpg" alt="ソードの2" loading="lazy">
+          <div class="card-name">ソードの2</div>
+          <div class="card-name-en">Two of Swords</div>
+        </a>
+        <a href="cards/swords_3.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_swords_3.jpg" alt="ソードの3" loading="lazy">
+          <div class="card-name">ソードの3</div>
+          <div class="card-name-en">Three of Swords</div>
+        </a>
+        <a href="cards/swords_4.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_swords_4.jpg" alt="ソードの4" loading="lazy">
+          <div class="card-name">ソードの4</div>
+          <div class="card-name-en">Four of Swords</div>
+        </a>
+        <a href="cards/swords_5.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_swords_5.jpg" alt="ソードの5" loading="lazy">
+          <div class="card-name">ソードの5</div>
+          <div class="card-name-en">Five of Swords</div>
+        </a>
+        <a href="cards/swords_6.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_swords_6.jpg" alt="ソードの6" loading="lazy">
+          <div class="card-name">ソードの6</div>
+          <div class="card-name-en">Six of Swords</div>
+        </a>
+        <a href="cards/swords_7.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_swords_7.jpg" alt="ソードの7" loading="lazy">
+          <div class="card-name">ソードの7</div>
+          <div class="card-name-en">Seven of Swords</div>
+        </a>
+        <a href="cards/swords_8.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_swords_8.jpg" alt="ソードの8" loading="lazy">
+          <div class="card-name">ソードの8</div>
+          <div class="card-name-en">Eight of Swords</div>
+        </a>
+        <a href="cards/swords_9.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_swords_9.jpg" alt="ソードの9" loading="lazy">
+          <div class="card-name">ソードの9</div>
+          <div class="card-name-en">Nine of Swords</div>
+        </a>
+        <a href="cards/swords_10.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_swords_10.jpg" alt="ソードの10" loading="lazy">
+          <div class="card-name">ソードの10</div>
+          <div class="card-name-en">Ten of Swords</div>
+        </a>
+        <a href="cards/swords_page.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_swords_page.jpg" alt="ソードのペイジ" loading="lazy">
+          <div class="card-name">ソードのペイジ</div>
+          <div class="card-name-en">Page of Swords</div>
+        </a>
+        <a href="cards/swords_knight.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_swords_knight.jpg" alt="ソードのナイト" loading="lazy">
+          <div class="card-name">ソードのナイト</div>
+          <div class="card-name-en">Knight of Swords</div>
+        </a>
+        <a href="cards/swords_queen.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_swords_queen.jpg" alt="ソードのクイーン" loading="lazy">
+          <div class="card-name">ソードのクイーン</div>
+          <div class="card-name-en">Queen of Swords</div>
+        </a>
+        <a href="cards/swords_king.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_swords_king.jpg" alt="ソードのキング" loading="lazy">
+          <div class="card-name">ソードのキング</div>
+          <div class="card-name-en">King of Swords</div>
+        </a>
+      </div>
+    </div>
+    <div class="section-nav">
+      <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ ページトップ</a>
+      <a href="index.html">🔮 無料タロット鑑定</a>
+    </div>
+    <div id="pentacles">
+      <h2 class="section-title"><span class="section-emoji">🌿</span>ペンタクル（金貨）<div class="section-subtitle">Pentacles（14枚）</div></h2>
+      <div class="card-grid">
+        <a href="cards/pentacles_ace.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_pentacles_ace.jpg" alt="ペンタクルのエース" loading="lazy">
+          <div class="card-name">ペンタクルのエース</div>
+          <div class="card-name-en">Ace of Pentacles</div>
+        </a>
+        <a href="cards/pentacles_2.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_pentacles_2.jpg" alt="ペンタクルの2" loading="lazy">
+          <div class="card-name">ペンタクルの2</div>
+          <div class="card-name-en">Two of Pentacles</div>
+        </a>
+        <a href="cards/pentacles_3.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_pentacles_3.jpg" alt="ペンタクルの3" loading="lazy">
+          <div class="card-name">ペンタクルの3</div>
+          <div class="card-name-en">Three of Pentacles</div>
+        </a>
+        <a href="cards/pentacles_4.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_pentacles_4.jpg" alt="ペンタクルの4" loading="lazy">
+          <div class="card-name">ペンタクルの4</div>
+          <div class="card-name-en">Four of Pentacles</div>
+        </a>
+        <a href="cards/pentacles_5.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_pentacles_5.jpg" alt="ペンタクルの5" loading="lazy">
+          <div class="card-name">ペンタクルの5</div>
+          <div class="card-name-en">Five of Pentacles</div>
+        </a>
+        <a href="cards/pentacles_6.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_pentacles_6.jpg" alt="ペンタクルの6" loading="lazy">
+          <div class="card-name">ペンタクルの6</div>
+          <div class="card-name-en">Six of Pentacles</div>
+        </a>
+        <a href="cards/pentacles_7.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_pentacles_7.jpg" alt="ペンタクルの7" loading="lazy">
+          <div class="card-name">ペンタクルの7</div>
+          <div class="card-name-en">Seven of Pentacles</div>
+        </a>
+        <a href="cards/pentacles_8.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_pentacles_8.jpg" alt="ペンタクルの8" loading="lazy">
+          <div class="card-name">ペンタクルの8</div>
+          <div class="card-name-en">Eight of Pentacles</div>
+        </a>
+        <a href="cards/pentacles_9.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_pentacles_9.jpg" alt="ペンタクルの9" loading="lazy">
+          <div class="card-name">ペンタクルの9</div>
+          <div class="card-name-en">Nine of Pentacles</div>
+        </a>
+        <a href="cards/pentacles_10.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_pentacles_10.jpg" alt="ペンタクルの10" loading="lazy">
+          <div class="card-name">ペンタクルの10</div>
+          <div class="card-name-en">Ten of Pentacles</div>
+        </a>
+        <a href="cards/pentacles_page.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_pentacles_page.jpg" alt="ペンタクルのペイジ" loading="lazy">
+          <div class="card-name">ペンタクルのペイジ</div>
+          <div class="card-name-en">Page of Pentacles</div>
+        </a>
+        <a href="cards/pentacles_knight.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_pentacles_knight.jpg" alt="ペンタクルのナイト" loading="lazy">
+          <div class="card-name">ペンタクルのナイト</div>
+          <div class="card-name-en">Knight of Pentacles</div>
+        </a>
+        <a href="cards/pentacles_queen.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_pentacles_queen.jpg" alt="ペンタクルのクイーン" loading="lazy">
+          <div class="card-name">ペンタクルのクイーン</div>
+          <div class="card-name-en">Queen of Pentacles</div>
+        </a>
+        <a href="cards/pentacles_king.html" class="card-link">
+          <img src="tarot_images_web/minor_arcana_pentacles_king.jpg" alt="ペンタクルのキング" loading="lazy">
+          <div class="card-name">ペンタクルのキング</div>
+          <div class="card-name-en">King of Pentacles</div>
+        </a>
+      </div>
+    </div>
+
     <div class="ad-space">
-      <p>🔮 もっと深い鑑定を受けたい方へ</p>
-      <a href="index.html" class="ad-cta">✨ 無料タロット鑑定を試す</a>
+      <p class="ad-label">PR</p>
+      <p class="ad-heading">もっと深く占いたい方へ</p>
+      <p class="ad-desc">ココナラの電話占いで、プロの占い師に直接相談できます</p>
+      <a href="https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+C3BAQ" rel="nofollow" class="btn-affiliate">電話占い【ココナラ】新規会員登録で3,000円無料クーポン</a><img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+C3BAQ" alt="">
+      <p class="ad-coupon">新規会員登録で3,000円無料クーポンプレゼント中</p>
     </div>
-    <div class="adsense-slot" id="ad-bottom"></div>
     <footer class="footer">
-      <p><a href="index.html">無料タロット鑑定</a></p>
+      <p><a href="index.html">🔮 無料タロット鑑定</a> | <a href="https://coconala.com/users/3772034" target="_blank" rel="noopener">個人鑑定はこちら</a></p>
       <p style="margin-top:12px;">※ タロットリーディングはエンターテインメントです。<br>大切な決断はご自身の判断で行ってくださいね。</p>
       <p style="margin-top:8px;">&copy; しまうまタロット</p>
     </footer>
   </div>
   <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-  <script src="review_spiritual.js"></script>
   <script>
-    function renderCards() {
-      const container = document.getElementById('cards-container');
-      const sections = [
-        { id: 'major', title: '大アルカナ', subtitle: 'Major Arcana（22枚）', emoji: '🌟', cards: MAJOR_ARCANA },
-        { id: 'wands', title: 'ワンド（棒）', subtitle: 'Wands（14枚）', emoji: '🔥', cards: WANDS },
-        { id: 'cups', title: 'カップ（聖杯）', subtitle: 'Cups（14枚）', emoji: '💧', cards: CUPS },
-        { id: 'swords', title: 'ソード（剣）', subtitle: 'Swords（14枚）', emoji: '💨', cards: SWORDS },
-        { id: 'pentacles', title: 'ペンタクル（金貨）', subtitle: 'Pentacles（14枚）', emoji: '🌿', cards: PENTACLES }
-      ];
-      let html = '';
-      sections.forEach((section, sIdx) => {
-        html += `<div id="${section.id}"><h2 class="section-title"><span class="section-emoji">${section.emoji}</span>${section.title}<div class="section-subtitle">${section.subtitle}</div></h2><div class="card-grid">`;
-        section.cards.forEach((card, cIdx) => {
-          const displayName = card.number !== undefined ? `${card.number}. ${card.name}` : card.name;
-          html += `<div class="card-item" data-index="${sIdx}-${cIdx}"><div class="card-header" onclick="toggleCard(this)"><span class="card-icon">${card.emoji}</span><div class="card-info"><div class="card-title">${displayName}</div><div class="card-title-en">${card.nameEn}</div></div><span class="card-toggle">▼</span></div><div class="card-detail"><div class="position-block upright"><span class="position-label">☀️ 正位置</span><div class="keyword">【${card.upright.keyword}】</div><div class="meaning">${card.upright.meaning}</div><div class="advice">💡 ${card.upright.advice}</div></div><div class="position-block reversed"><span class="position-label">🌙 逆位置</span><div class="keyword">【${card.reversed.keyword}】</div><div class="meaning">${card.reversed.meaning}</div><div class="advice">💡 ${card.reversed.advice}</div></div></div></div>`;
-        });
-        html += '</div></div>';
-        if (sIdx < sections.length - 1) {
-          html += `<div class="section-nav"><a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ ページトップ</a><a href="index.html">🔮 無料タロット鑑定</a></div>`;
-        }
-        if (sIdx === 0) {
-          html += '<div class="ad-space"><p class="ad-label">PR</p><p class="ad-heading">もっと深く占いたい方へ</p><p class="ad-desc">ココナラの電話占いで、プロの占い師に直接相談できます</p><a href="https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+C3BAQ" rel="nofollow" class="btn-affiliate">電話占い【ココナラ】新規会員登録で3,000円無料クーポンプレゼント中</a><img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+C3BAQ" alt=""></div>';
-        }
-      });
-      container.innerHTML = html;
-    }
-    function toggleCard(header) { header.closest('.card-item').classList.toggle('open'); }
-    function expandAll() { document.querySelectorAll('.card-item').forEach(el => el.classList.add('open')); }
-    function collapseAll() { document.querySelectorAll('.card-item').forEach(el => el.classList.remove('open')); }
     window.addEventListener('scroll', () => { document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 500); });
-    renderCards();
   </script>
 </body>
 </html>

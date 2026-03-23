@@ -41,6 +41,13 @@
     .card-hero h1 { font-size: 24px; font-weight: 700; color: #7b1fa2; margin-top: 16px; }
     .card-hero .name-en { font-size: 13px; color: #b39dba; margin-top: 4px; }
     .glass-card { background: rgba(255,255,255,0.75); backdrop-filter: blur(10px); border-radius: 24px; padding: 28px 24px; box-shadow: 0 8px 32px rgba(179,136,200,0.12); border: 1px solid rgba(255,255,255,0.6); margin-bottom: 24px; }
+    .glass-card.illust-block { background: linear-gradient(135deg, rgba(255,248,225,0.85), rgba(255,255,255,0.75)); border: 1px solid rgba(255,202,40,0.3); }
+    .illust-title { display: inline-block; padding: 6px 18px; border-radius: 20px; font-size: 15px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, #ffca28, #ffa726); color: #fff; }
+    .illust-keywords { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+    .illust-kw { display: inline-block; padding: 4px 14px; border-radius: 16px; font-size: 13px; font-weight: 700; color: #e65100; background: rgba(255,224,130,0.5); border: 1px solid rgba(255,183,77,0.4); }
+    .illust-symbols { list-style: none; padding: 0; }
+    .illust-symbols li { font-size: 14px; line-height: 1.9; color: #5c4a6b; padding: 6px 0; border-bottom: 1px solid rgba(255,202,40,0.15); }
+    .illust-symbols li:last-child { border-bottom: none; }
     .glass-card.upright-block { background: linear-gradient(135deg, rgba(252,228,236,0.85), rgba(255,255,255,0.75)); border: 1px solid rgba(244,143,177,0.3); }
     .glass-card.reversed-block { background: linear-gradient(135deg, rgba(237,231,246,0.85), rgba(255,255,255,0.75)); border: 1px solid rgba(179,157,219,0.3); }
     .position-title { display: inline-block; padding: 6px 18px; border-radius: 20px; font-size: 15px; font-weight: 700; margin-bottom: 16px; }
@@ -88,22 +95,22 @@
       <p class="name-en">The Hanged Man</p>
     </div>
 
+    <div class="glass-card illust-block">
+      <span class="illust-title">🎨 カードに描かれているもの</span>
+      <div class="illust-keywords"><span class="illust-kw">視点の転換</span><span class="illust-kw">忍耐</span><span class="illust-kw">悟り</span></div>
+      <ul class="illust-symbols"><li>逆さまに吊るされた男 — 普通とは違う見方で新しい発見を得る</li><li>世界樹（生命の木） — すべての生命がつながっていることの象徴</li><li>頭の光輪 — 逆さまの状態でも心に輝く悟りと洞察</li><li>自ら組んだ足 — 何かを得るために一時的な犠牲を払う覚悟</li><li>穏やかな表情 — 困難の中にある内面の平和</li></ul>
+    </div>
+
     <div class="glass-card upright-block">
       <span class="position-title">☀️ 正位置</span>
       <div class="keyword">【視点の転換・手放し・忍耐・新しい見方】</div>
-      <p class="section-label">意味</p>
       <div class="meaning">今までとは違う角度から物事を見てみると、新しい発見があるかもしれません。手放すことで得られるものがありますよ。</div>
-      <p class="section-label">アドバイス</p>
-      <div class="advice">今は動くときではなく、待つときです。じっと待つことで見えてくるものがあります。視点を変えてみることで、世界が変わっていきますよ。</div>
     </div>
 
     <div class="glass-card reversed-block">
       <span class="position-title">🌙 逆位置</span>
       <div class="keyword">【無駄な犠牲・執着・身動きが取れない】</div>
-      <p class="section-label">意味</p>
       <div class="meaning">我慢し続けることが美徳ではありません。そろそろ動き出してもよいのではないでしょうか。</div>
-      <p class="section-label">アドバイス</p>
-      <div class="advice">意味のない我慢はしなくて大丈夫です。自分を犠牲にすることと、誰かのために頑張ることは違いますからね。</div>
     </div>
 
     <a href="../index.html" class="btn-primary">🔮 無料タロット鑑定をしてみる</a>

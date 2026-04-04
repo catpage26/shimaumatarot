@@ -1273,44 +1273,44 @@ function getCardId(card) {
 // ============================================
 const AFFILIATE_ADS = {
   his_feelings: {
-    text: "彼の気持ちを見透します ココナラの【電話占い】",
+    text: "彼の本音を もっと具体的に見てもらう",
     url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+BYT9F",
     img: "https://www18.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+BYT9F"
   },
   complex_feelings: {
-    text: "不倫の相談なら ココナラの【電話占い】",
+    text: "誰にも言えない恋を 相談してみる",
     url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+C0IZN",
     img: "https://www18.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+C0IZN"
   },
   new_encounter: {
-    text: "幸せになれる電話占い【ココナラ】",
+    text: "出会いの時期を 具体的に見てもらう",
     url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+BY642",
     img: "https://www19.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+BY642"
   },
   reunion: {
-    text: "復縁の相談なら ココナラの【電話占い】",
+    text: "復縁の可能性を 具体的に相談する",
     url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+C0B9V",
     img: "https://www18.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+C0B9V"
   },
   unrequited: {
-    text: "この苦しい恋はいつまで？ ココナラの【電話占い】",
+    text: "この恋を動かす方法を 見てもらう",
     url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+BZVUB",
     img: "https://www18.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+BZVUB"
   },
   mutual: {
-    text: "幸せになれる電話占い【ココナラ】",
+    text: "出会いの時期を 具体的に見てもらう",
     url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+BY642",
     img: "https://www19.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+BY642"
   },
   complex_love: {
-    text: "不倫の相談なら ココナラの【電話占い】",
+    text: "誰にも言えない恋を 相談してみる",
     url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+C0IZN",
     img: "https://www18.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+C0IZN"
   }
 };
 
 const DEFAULT_AD = {
-  text: "もう、一人で悩まないで。ココナラの【電話占い】",
+  text: "今の悩みを 相談できる占い師を見る",
   url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+BZGER",
   img: "https://www18.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+BZGER"
 };

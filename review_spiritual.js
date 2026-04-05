@@ -1271,55 +1271,78 @@ function getCardId(card) {
 // ============================================
 // アフィリエイト広告の出し分け
 // ============================================
-const AFFILIATE_ADS = {
-  his_feelings: {
-    text: "幸せになれる電話占い【ココナラ】",
-    url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+BY642",
-    img: "https://www19.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+BY642"
+const COCONALA_PRODUCT_AD = {
+  type: "a8_product",
+  req: {
+    mat: "4AZLSG+C7ZDLM+2PEO+HUSFL",
+    alt: "商品リンク",
+    id: "4A9uQXF-g7-vfShePg"
   },
-  complex_feelings: {
-    text: "幸せになれる電話占い【ココナラ】",
-    url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+BY642",
-    img: "https://www19.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+BY642"
-  },
-  new_encounter: {
-    text: "幸せになれる電話占い【ココナラ】",
-    url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+BY642",
-    img: "https://www19.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+BY642"
-  },
-  reunion: {
-    text: "幸せになれる電話占い【ココナラ】",
-    url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+BY642",
-    img: "https://www19.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+BY642"
-  },
-  unrequited: {
-    text: "幸せになれる電話占い【ココナラ】",
-    url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+BY642",
-    img: "https://www19.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+BY642"
-  },
-  mutual: {
-    text: "幸せになれる電話占い【ココナラ】",
-    url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+BY642",
-    img: "https://www19.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+BY642"
-  },
-  complex_love: {
-    text: "幸せになれる電話占い【ココナラ】",
-    url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+BY642",
-    img: "https://www19.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+BY642"
+  goods: {
+    ejp: "h" + "ttps://coconala.com/categories/3?service_kind=1",
+    imu: "恋愛の悩みを相談できる電話占い"
   }
 };
 
-const DEFAULT_AD = {
-  text: "幸せになれる電話占い【ココナラ】",
-  url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+BY642",
-  img: "https://www19.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+BY642"
+const AFFILIATE_ADS = {
+  his_feelings: COCONALA_PRODUCT_AD,
+  complex_feelings: COCONALA_PRODUCT_AD,
+  new_encounter: COCONALA_PRODUCT_AD,
+  reunion: COCONALA_PRODUCT_AD,
+  unrequited: COCONALA_PRODUCT_AD,
+  mutual: COCONALA_PRODUCT_AD,
+  complex_love: COCONALA_PRODUCT_AD
 };
+
+const DEFAULT_AD = COCONALA_PRODUCT_AD;
+
+let a8ScriptLoader = null;
+
+function ensureA8Script() {
+  if (typeof window.a8adscript === "function") return Promise.resolve();
+  if (a8ScriptLoader) return a8ScriptLoader;
+
+  a8ScriptLoader = new Promise((resolve, reject) => {
+    const existing = document.querySelector('script[data-a8-product-link="1"]');
+    if (existing) {
+      existing.addEventListener("load", resolve, { once: true });
+      existing.addEventListener("error", reject, { once: true });
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = "//statics.a8.net/ad/ad.js";
+    script.type = "text/javascript";
+    script.dataset.a8ProductLink = "1";
+    script.onload = resolve;
+    script.onerror = reject;
+    document.body.appendChild(script);
+  });
+
+  return a8ScriptLoader;
+}
+
+function renderAffiliateAd(slot, ad) {
+  if (ad.type === "a8_product") {
+    slot.innerHTML = `<span class="a8ad ${ad.req.id}"></span>`;
+    ensureA8Script()
+      .then(() => {
+        if (typeof window.a8adscript === "function") {
+          window.a8adscript("body").showAd({ req: ad.req, goods: ad.goods });
+        }
+      })
+      .catch((error) => console.error("[A8] 商品リンク読み込み失敗", error));
+    return;
+  }
+
+  slot.innerHTML = `<a href="${ad.url}" rel="nofollow" class="btn-affiliate">${ad.text}</a><img border="0" width="1" height="1" src="${ad.img}" alt="">`;
+}
 
 function updateAffiliateAd(subCategoryId) {
   const ad = AFFILIATE_ADS[subCategoryId] || DEFAULT_AD;
   const slot = document.getElementById("affiliate-slot");
   if (!slot) return;
-  slot.innerHTML = `<a href="${ad.url}" rel="nofollow" class="btn-affiliate">${ad.text}</a><img border="0" width="1" height="1" src="${ad.img}" alt="">`;
+  renderAffiliateAd(slot, ad);
 }
 
 function generateReading(subCategoryId, drawnCard) {

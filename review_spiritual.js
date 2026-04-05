@@ -1323,16 +1323,56 @@ const COCONALA_COMPLEX_PRODUCT_AD = {
   }
 };
 
-const ALICE_AD = {
-  url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C9RNN6+48YY+NTJWY",
-  text: "電話占いAlice",
-  img: "https://www16.a8.net/0.gif?a8mat=4AZLSG+C9RNN6+48YY+NTJWY"
+const COCONALA_WORK_PRODUCT_AD = {
+  type: "a8_product",
+  req: {
+    mat: "4AZLSG+C7ZDLM+2PEO+HUSFL",
+    alt: "商品リンク",
+    id: "4A9uQXF-g7-vfUXL9W"
+  },
+  goods: {
+    ejp: "h" + "ttps://coconala.com/categories/2?service_kind=1",
+    imu: "仕事や転職の悩みを相談できる電話相談"
+  }
 };
 
-const COMET_AD = {
-  url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C9681E+48YY+5YJRM",
-  text: "電話占いComet",
-  img: "https://www12.a8.net/0.gif?a8mat=4AZLSG+C9681E+48YY+5YJRM"
+const COCONALA_RELATIONSHIP_PRODUCT_AD = {
+  type: "a8_product",
+  req: {
+    mat: "4AZLSG+C7ZDLM+2PEO+HUSFL",
+    alt: "商品リンク",
+    id: "4A9uQXF-g7-vfUXQxo"
+  },
+  goods: {
+    ejp: "h" + "ttps://coconala.com/categories/2?service_kind=1",
+    imu: "人間関係や家庭の悩みを相談できる電話相談"
+  }
+};
+
+const COCONALA_MONEY_PRODUCT_AD = {
+  type: "a8_product",
+  req: {
+    mat: "4AZLSG+C7ZDLM+2PEO+HUSFL",
+    alt: "商品リンク",
+    id: "4A9uQXF-g7-vfUXUB8"
+  },
+  goods: {
+    ejp: "h" + "ttps://coconala.com/categories/3?service_kind=1",
+    imu: "お金やこれからの流れを相談できる電話占い"
+  }
+};
+
+const COCONALA_FLOW_PRODUCT_AD = {
+  type: "a8_product",
+  req: {
+    mat: "4AZLSG+C7ZDLM+2PEO+HUSFL",
+    alt: "商品リンク",
+    id: "4A9uQXF-g7-vfUXYPl"
+  },
+  goods: {
+    ejp: "h" + "ttps://coconala.com/categories/3?service_kind=1",
+    imu: "今後の流れや不安を相談できる電話占い"
+  }
 };
 
 const AFFILIATE_ADS = {
@@ -1346,14 +1386,14 @@ const AFFILIATE_ADS = {
 };
 
 const PARENT_AFFILIATE_ADS = {
-  work: ALICE_AD,
-  family: ALICE_AD,
-  money: ALICE_AD,
-  energy: COMET_AD,
-  spiritual: COMET_AD
+  work: COCONALA_WORK_PRODUCT_AD,
+  family: COCONALA_RELATIONSHIP_PRODUCT_AD,
+  money: COCONALA_MONEY_PRODUCT_AD,
+  energy: COCONALA_FLOW_PRODUCT_AD,
+  spiritual: COCONALA_FLOW_PRODUCT_AD
 };
 
-const DEFAULT_AD = COMET_AD;
+const DEFAULT_AD = COCONALA_FLOW_PRODUCT_AD;
 
 let a8ScriptLoader = null;
 

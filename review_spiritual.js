@@ -1273,14 +1273,14 @@ function getCardId(card) {
 // ============================================
 const AFFILIATE_ADS = {
   his_feelings: {
-    text: "彼の気持ちを見透します ココナラの【電話占い】",
-    url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+BYT9F",
-    img: "https://www18.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+BYT9F"
+    text: "幸せになれる電話占い【ココナラ】",
+    url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+BY642",
+    img: "https://www19.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+BY642"
   },
   complex_feelings: {
-    text: "不倫の相談なら ココナラの【電話占い】",
-    url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+C0IZN",
-    img: "https://www18.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+C0IZN"
+    text: "幸せになれる電話占い【ココナラ】",
+    url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+BY642",
+    img: "https://www19.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+BY642"
   },
   new_encounter: {
     text: "幸せになれる電話占い【ココナラ】",
@@ -1288,14 +1288,14 @@ const AFFILIATE_ADS = {
     img: "https://www19.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+BY642"
   },
   reunion: {
-    text: "復縁の相談なら ココナラの【電話占い】",
-    url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+C0B9V",
-    img: "https://www18.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+C0B9V"
+    text: "幸せになれる電話占い【ココナラ】",
+    url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+BY642",
+    img: "https://www19.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+BY642"
   },
   unrequited: {
-    text: "この苦しい恋はいつまで？ ココナラの【電話占い】",
-    url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+BZVUB",
-    img: "https://www18.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+BZVUB"
+    text: "幸せになれる電話占い【ココナラ】",
+    url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+BY642",
+    img: "https://www19.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+BY642"
   },
   mutual: {
     text: "幸せになれる電話占い【ココナラ】",
@@ -1303,16 +1303,16 @@ const AFFILIATE_ADS = {
     img: "https://www19.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+BY642"
   },
   complex_love: {
-    text: "不倫の相談なら ココナラの【電話占い】",
-    url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+C0IZN",
-    img: "https://www18.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+C0IZN"
+    text: "幸せになれる電話占い【ココナラ】",
+    url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+BY642",
+    img: "https://www19.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+BY642"
   }
 };
 
 const DEFAULT_AD = {
-  text: "もう、一人で悩まないで。ココナラの【電話占い】",
-  url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+BZGER",
-  img: "https://www18.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+BZGER"
+  text: "幸せになれる電話占い【ココナラ】",
+  url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C7ZCTU+2PEO+BY642",
+  img: "https://www19.a8.net/0.gif?a8mat=4AZLSG+C7ZCTU+2PEO+BY642"
 };
 
 function updateAffiliateAd(subCategoryId) {

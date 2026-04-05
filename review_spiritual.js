@@ -1323,6 +1323,18 @@ const COCONALA_COMPLEX_PRODUCT_AD = {
   }
 };
 
+const ALICE_AD = {
+  url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C9RNN6+48YY+NTJWY",
+  text: "電話占いAlice",
+  img: "https://www16.a8.net/0.gif?a8mat=4AZLSG+C9RNN6+48YY+NTJWY"
+};
+
+const COMET_AD = {
+  url: "https://px.a8.net/svt/ejp?a8mat=4AZLSG+C9681E+48YY+5YJRM",
+  text: "電話占いComet",
+  img: "https://www12.a8.net/0.gif?a8mat=4AZLSG+C9681E+48YY+5YJRM"
+};
+
 const AFFILIATE_ADS = {
   his_feelings: COCONALA_FEELINGS_PRODUCT_AD,
   complex_feelings: COCONALA_COMPLEX_PRODUCT_AD,
@@ -1333,7 +1345,15 @@ const AFFILIATE_ADS = {
   complex_love: COCONALA_COMPLEX_PRODUCT_AD
 };
 
-const DEFAULT_AD = COCONALA_PRODUCT_AD;
+const PARENT_AFFILIATE_ADS = {
+  work: ALICE_AD,
+  family: ALICE_AD,
+  money: ALICE_AD,
+  energy: COMET_AD,
+  spiritual: COMET_AD
+};
+
+const DEFAULT_AD = COMET_AD;
 
 let a8ScriptLoader = null;
 
@@ -1378,7 +1398,8 @@ function renderAffiliateAd(slot, ad) {
 }
 
 function updateAffiliateAd(subCategoryId) {
-  const ad = AFFILIATE_ADS[subCategoryId] || DEFAULT_AD;
+  const parentId = SUB_TO_PARENT[subCategoryId];
+  const ad = AFFILIATE_ADS[subCategoryId] || PARENT_AFFILIATE_ADS[parentId] || DEFAULT_AD;
   const slot = document.getElementById("affiliate-slot");
   if (!slot) return;
   renderAffiliateAd(slot, ad);

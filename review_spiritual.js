@@ -1284,14 +1284,53 @@ const COCONALA_PRODUCT_AD = {
   }
 };
 
+const COCONALA_FEELINGS_PRODUCT_AD = {
+  type: "a8_product",
+  req: {
+    mat: "4AZLSG+C7ZDLM+2PEO+HUSFL",
+    alt: "商品リンク",
+    id: "4A9uQXF-g7-vfSmog4"
+  },
+  goods: {
+    ejp: "h" + "ttps://coconala.com/categories/3?service_kind=1",
+    imu: "相手の気持ちを相談できる電話占い"
+  }
+};
+
+const COCONALA_REUNION_PRODUCT_AD = {
+  type: "a8_product",
+  req: {
+    mat: "4AZLSG+C7ZDLM+2PEO+HUSFL",
+    alt: "商品リンク",
+    id: "4A9uQXF-g7-vfSmrn0"
+  },
+  goods: {
+    ejp: "h" + "ttps://coconala.com/categories/3?service_kind=1",
+    imu: "復縁の悩みを相談できる電話占い"
+  }
+};
+
+const COCONALA_COMPLEX_PRODUCT_AD = {
+  type: "a8_product",
+  req: {
+    mat: "4AZLSG+C7ZDLM+2PEO+HUSFL",
+    alt: "商品リンク",
+    id: "4A9uQXF-g7-vfSmA1z"
+  },
+  goods: {
+    ejp: "h" + "ttps://coconala.com/categories/3?service_kind=1",
+    imu: "複雑な恋の悩みを相談できる電話占い"
+  }
+};
+
 const AFFILIATE_ADS = {
-  his_feelings: COCONALA_PRODUCT_AD,
-  complex_feelings: COCONALA_PRODUCT_AD,
+  his_feelings: COCONALA_FEELINGS_PRODUCT_AD,
+  complex_feelings: COCONALA_COMPLEX_PRODUCT_AD,
   new_encounter: COCONALA_PRODUCT_AD,
-  reunion: COCONALA_PRODUCT_AD,
-  unrequited: COCONALA_PRODUCT_AD,
+  reunion: COCONALA_REUNION_PRODUCT_AD,
+  unrequited: COCONALA_FEELINGS_PRODUCT_AD,
   mutual: COCONALA_PRODUCT_AD,
-  complex_love: COCONALA_PRODUCT_AD
+  complex_love: COCONALA_COMPLEX_PRODUCT_AD
 };
 
 const DEFAULT_AD = COCONALA_PRODUCT_AD;

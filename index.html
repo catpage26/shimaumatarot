@@ -66,6 +66,13 @@
     .header h1 { font-size: 24px; font-weight: 700; color: #8e6c9e; letter-spacing: 2px; margin-bottom: 8px; }
     .header p { font-size: 14px; color: #b39dba; line-height: 1.8; }
 
+
+    .seo-entry-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 32px; }
+    .seo-entry-card { display: block; padding: 16px 14px; border-radius: 18px; background: rgba(255,255,255,0.72); border: 1px solid rgba(206,147,216,0.3); color: #7b4f91; text-decoration: none; box-shadow: 0 4px 14px rgba(179,136,203,0.1); transition: transform 0.2s, box-shadow 0.2s; }
+    .seo-entry-card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(179,136,203,0.18); }
+    .seo-entry-card strong { display: block; font-size: 14px; line-height: 1.55; }
+    .seo-entry-card span { display: block; margin-top: 4px; font-size: 12px; color: #9c88a8; line-height: 1.6; }
+
     .glass-card { background: rgba(255,255,255,0.75); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 24px; padding: 32px 28px; box-shadow: 0 8px 32px rgba(179,136,200,0.12), 0 2px 8px rgba(240,152,196,0.08); border: 1px solid rgba(255,255,255,0.6); margin-bottom: 32px; }
     .section-label { display: block; font-size: 15px; font-weight: 700; color: #8e6c9e; margin-bottom: 16px; text-align: center; }
 
@@ -155,6 +162,7 @@
       .card-name { font-size: 18px; }
       .main-cat-emoji { font-size: 28px; }
       .main-cat-label { font-size: 13px; }
+      .seo-entry-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -170,6 +178,17 @@
       <h1>タロットリーディング</h1>
       <p>気になるジャンルを選んで<br>カードからのメッセージを受け取ってね</p>
     </header>
+    <section class="glass-card">
+      <span class="section-label">悩み別の入口</span>
+      <p style="text-align:center;color:#9c88a8;font-size:13px;line-height:1.8;margin-bottom:16px;">検索で来た人もすぐ選べるように、テーマ別ページを用意したよ</p>
+      <div class="seo-entry-grid">
+        <a class="seo-entry-card" href="topics/his-feelings.html"><strong>あの人の気持ち</strong><span>相手の本音や距離感を見たい時</span></a>
+        <a class="seo-entry-card" href="topics/reunion.html"><strong>復縁</strong><span>もう一度つながりたい時</span></a>
+        <a class="seo-entry-card" href="topics/unrequited-love.html"><strong>片思い</strong><span>この恋の行方を見たい時</span></a>
+        <a class="seo-entry-card" href="topics/work.html"><strong>仕事運</strong><span>転職や職場の悩みを整理したい時</span></a>
+        <a class="seo-entry-card" href="topics/today.html"><strong>今日の運勢</strong><span>今日の流れを軽く見たい時</span></a>
+      </div>
+    </section>
     <div class="glass-card" id="main-category-area">
       <span class="section-label">✨ 何について占う？</span>
       <div class="main-cat-grid" id="main-cat-grid"></div>

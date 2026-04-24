@@ -2,9 +2,10 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://statics.a8.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://catpage26.github.io https://www.google-analytics.com https://www.googletagmanager.com https://statics.a8.net; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com; object-src 'none'; base-uri 'self'; form-action 'self' https://coconala.com; upgrade-insecure-requests">
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FC70JL0Q6F"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-FC70JL0Q6F');</script>
+<script src="analytics.js" defer></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>タロットカード78枚の意味一覧【イラスト付き】| しまうまタロット</title>
   <meta name="description" content="タロットカード全78枚（大アルカナ22枚・小アルカナ56枚）の意味を正位置・逆位置で詳しく解説。ウェイト=スミス版イラスト付き。しまうまタロットがやさしくお伝えします。">
@@ -178,7 +179,7 @@
       </div>
     </div>
     <div class="section-nav">
-      <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ ページトップ</a>
+      <a href="#" class="js-page-top">↑ ページトップ</a>
       <a href="index.html">🔮 無料タロット鑑定</a>
     </div>
     <div id="wands">
@@ -243,7 +244,7 @@
       </div>
     </div>
     <div class="section-nav">
-      <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ ページトップ</a>
+      <a href="#" class="js-page-top">↑ ページトップ</a>
       <a href="index.html">🔮 無料タロット鑑定</a>
     </div>
     <div id="cups">
@@ -308,7 +309,7 @@
       </div>
     </div>
     <div class="section-nav">
-      <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ ページトップ</a>
+      <a href="#" class="js-page-top">↑ ページトップ</a>
       <a href="index.html">🔮 無料タロット鑑定</a>
     </div>
     <div id="swords">
@@ -373,7 +374,7 @@
       </div>
     </div>
     <div class="section-nav">
-      <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ ページトップ</a>
+      <a href="#" class="js-page-top">↑ ページトップ</a>
       <a href="index.html">🔮 無料タロット鑑定</a>
     </div>
     <div id="pentacles">
@@ -451,9 +452,7 @@
       <p style="margin-top:8px;">&copy; しまうまタロット | <a href="privacy.html">プライバシーポリシー</a></p>
     </footer>
   </div>
-  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-  <script>
-    window.addEventListener('scroll', () => { document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 500); });
-  </script>
+  <button class="back-to-top" id="backToTop">↑</button>
+  <script src="site_interactions.js"></script>
 </body>
 </html>

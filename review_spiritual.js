@@ -1395,42 +1395,20 @@ const PARENT_AFFILIATE_ADS = {
 
 const DEFAULT_AD = COCONALA_FLOW_PRODUCT_AD;
 
-let a8ScriptLoader = null;
-
-function ensureA8Script() {
-  if (typeof window.a8adscript === "function") return Promise.resolve();
-  if (a8ScriptLoader) return a8ScriptLoader;
-
-  a8ScriptLoader = new Promise((resolve, reject) => {
-    const existing = document.querySelector('script[data-a8-product-link="1"]');
-    if (existing) {
-      existing.addEventListener("load", resolve, { once: true });
-      existing.addEventListener("error", reject, { once: true });
-      return;
-    }
-
-    const script = document.createElement("script");
-    script.src = "//statics.a8.net/ad/ad.js";
-    script.type = "text/javascript";
-    script.dataset.a8ProductLink = "1";
-    script.onload = resolve;
-    script.onerror = reject;
-    document.body.appendChild(script);
-  });
-
-  return a8ScriptLoader;
+function buildA8ProductLink(ad) {
+  const mat = ad.req && ad.req.mat;
+  const redirect = ad.goods && ad.goods.ejp ? `&a8ejpredirect=${encodeURIComponent(ad.goods.ejp)}` : "";
+  return {
+    url: `https://px.a8.net/svt/ejp?a8mat=${mat}${redirect}`,
+    img: `https://www17.a8.net/0.gif?a8mat=${mat}`,
+    text: ad.text || (ad.goods && ad.goods.imu) || (ad.req && ad.req.alt) || "詳しく見る"
+  };
 }
 
 function renderAffiliateAd(slot, ad) {
   if (ad.type === "a8_product") {
-    slot.innerHTML = `<span class="a8ad ${ad.req.id}"></span>`;
-    ensureA8Script()
-      .then(() => {
-        if (typeof window.a8adscript === "function") {
-          window.a8adscript("body").showAd({ req: ad.req, goods: ad.goods });
-        }
-      })
-      .catch((error) => console.error("[A8] 商品リンク読み込み失敗", error));
+    const productLink = buildA8ProductLink(ad);
+    slot.innerHTML = `<a href="${productLink.url}" rel="nofollow" class="btn-affiliate">${productLink.text}</a><img border="0" width="1" height="1" src="${productLink.img}" alt="">`;
     return;
   }
 

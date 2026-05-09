@@ -1408,11 +1408,11 @@ function buildA8ProductLink(ad) {
 function renderAffiliateAd(slot, ad) {
   if (ad.type === "a8_product") {
     const productLink = buildA8ProductLink(ad);
-    slot.innerHTML = `<a href="${productLink.url}" rel="nofollow" class="btn-affiliate">${productLink.text}</a><img border="0" width="1" height="1" src="${productLink.img}" alt="">`;
+    slot.innerHTML = `<a href="${productLink.url}" target="_blank" rel="nofollow sponsored noopener noreferrer" class="btn-affiliate">${productLink.text}</a><img border="0" width="1" height="1" src="${productLink.img}" alt="">`;
     return;
   }
 
-  slot.innerHTML = `<a href="${ad.url}" rel="nofollow" class="btn-affiliate">${ad.text}</a><img border="0" width="1" height="1" src="${ad.img}" alt="">`;
+  slot.innerHTML = `<a href="${ad.url}" target="_blank" rel="nofollow sponsored noopener noreferrer" class="btn-affiliate">${ad.text}</a><img border="0" width="1" height="1" src="${ad.img}" alt="">`;
 }
 
 function updateAffiliateAd(subCategoryId) {
@@ -1566,7 +1566,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --- 戻るボタン ---
-  backToMainBtn.addEventListener("click", () => {
+  backToMainBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
     subCatArea.classList.add("hidden");
     drawSection.classList.add("hidden");
     cardArea.classList.add("hidden");
@@ -1577,7 +1579,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // --- カードを引く ---
-  drawBtn.addEventListener("click", () => {
+  drawBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
     if (isAnimating || !selectedSubId) return;
 
     isAnimating = true;
@@ -1608,7 +1612,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // --- もう一度引く ---
-  resetBtn.addEventListener("click", () => {
+  resetBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
     cardArea.classList.add("hidden");
     readingArea.classList.add("hidden");
     resetBtn.classList.add("hidden");

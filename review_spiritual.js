@@ -1415,6 +1415,24 @@ function renderAffiliateAd(slot, ad) {
   slot.innerHTML = `<a href="${ad.url}" target="_blank" rel="nofollow sponsored noopener noreferrer" class="btn-affiliate">${ad.text}</a><img border="0" width="1" height="1" src="${ad.img}" alt="">`;
 }
 
+function trackSiteEvent(eventName, params = {}) {
+  if (typeof gtag !== "function") return;
+  gtag("event", eventName, params);
+}
+
+function trackAffiliateClicks(slot, params = {}) {
+  if (!slot) return;
+  slot.querySelectorAll("a[href]").forEach(link => {
+    link.addEventListener("click", () => {
+      trackSiteEvent("affiliate_click", {
+        ...params,
+        affiliate_label: link.textContent.trim(),
+        affiliate_url: link.href
+      });
+    });
+  });
+}
+
 function updateAffiliateAd(subCategoryId) {
   const parentId = SUB_TO_PARENT[subCategoryId];
   const ad = AFFILIATE_ADS[subCategoryId] || PARENT_AFFILIATE_ADS[parentId] || DEFAULT_AD;
@@ -1598,11 +1616,26 @@ document.addEventListener("DOMContentLoaded", () => {
       showCard(drawnCard, () => {
         const reading = generateReading(selectedSubId, drawnCard);
         showReading(reading);
+        const parentId = SUB_TO_PARENT[selectedSubId] || "";
+        trackSiteEvent("result_view", {
+          site_name: "shimaumatarot",
+          category_id: parentId,
+          subcategory_id: selectedSubId,
+          card_name: reading.card.name,
+          card_position: reading.isReversed ? "reversed" : "upright"
+        });
         // アフィリエイト枠を表示（カテゴリ別に広告を出し分け）
         const affArea = document.getElementById("affiliate-area");
+        const affiliateSlot = document.getElementById("affiliate-slot");
         if (affArea) {
           updateAffiliateAd(selectedSubId);
           affArea.classList.remove("hidden");
+          trackAffiliateClicks(affiliateSlot, {
+            site_name: "shimaumatarot",
+            category_id: parentId,
+            subcategory_id: selectedSubId,
+            card_name: reading.card.name
+          });
         }
         isAnimating = false;
         drawBtn.disabled = false;

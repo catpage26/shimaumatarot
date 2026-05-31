@@ -1394,6 +1394,7 @@ const PARENT_AFFILIATE_ADS = {
 };
 
 const DEFAULT_AD = COCONALA_FLOW_PRODUCT_AD;
+const PERSONAL_READING_URL = "https://coconala.com/users/3772034";
 
 function buildA8ProductLink(ad) {
   const mat = ad.req && ad.req.mat;
@@ -1431,6 +1432,47 @@ function trackAffiliateClicks(slot, params = {}) {
       });
     });
   });
+}
+
+function createPersonalReadingCta(params = {}) {
+  const cta = document.createElement("section");
+  cta.className = "personal-reading-cta";
+
+  const label = document.createElement("p");
+  label.className = "personal-reading-label";
+  label.textContent = "個人鑑定";
+
+  const title = document.createElement("p");
+  title.className = "personal-reading-title";
+  title.textContent = "この結果を、あなたの状況に合わせて深く読む";
+
+  const desc = document.createElement("p");
+  desc.className = "personal-reading-desc";
+  desc.textContent = "恋愛、人間関係、仕事、これからの流れまで、しまうまタロットが個別に鑑定します。";
+
+  const link = document.createElement("a");
+  link.className = "btn-personal-reading";
+  link.href = PERSONAL_READING_URL;
+  link.target = "_blank";
+  link.rel = "nofollow noopener noreferrer";
+  link.textContent = "ココナラで個人鑑定を見る";
+  link.addEventListener("click", () => {
+    trackSiteEvent("personal_reading_click", {
+      ...params,
+      personal_reading_url: PERSONAL_READING_URL
+    });
+  });
+
+  const note = document.createElement("p");
+  note.className = "personal-reading-note";
+  note.textContent = "有料鑑定です。内容や受付状況はココナラでご確認ください。";
+
+  cta.appendChild(label);
+  cta.appendChild(title);
+  cta.appendChild(desc);
+  cta.appendChild(link);
+  cta.appendChild(note);
+  return cta;
 }
 
 function updateAffiliateAd(subCategoryId) {
@@ -1716,10 +1758,21 @@ document.addEventListener("DOMContentLoaded", () => {
     textContainer.className = "reading-text";
     readingArea.appendChild(header);
     readingArea.appendChild(textContainer);
-    typeText(textContainer, reading.text, 0);
+    typeText(textContainer, reading.text, 0, () => {
+      const parentId = SUB_TO_PARENT[selectedSubId] || "";
+      readingArea.appendChild(createPersonalReadingCta({
+        site_name: "shimaumatarot",
+        category_id: parentId,
+        subcategory_id: selectedSubId || "",
+        card_name: reading.card.name,
+        card_position: reading.isReversed ? "reversed" : "upright"
+      }));
+      resetBtn.classList.remove("hidden");
+      readingArea.scrollIntoView({ behavior: "smooth", block: "end" });
+    });
   }
 
-  function typeText(el, text, idx) {
+  function typeText(el, text, idx, onComplete) {
     if (idx < text.length) {
       const char = text[idx];
       if (char === "\n") {
@@ -1728,10 +1781,9 @@ document.addEventListener("DOMContentLoaded", () => {
         el.appendChild(document.createTextNode(char));
       }
       const delay = (char === "。" || char === "、" || char === "…") ? 80 : 25;
-      setTimeout(() => typeText(el, text, idx + 1), delay);
+      setTimeout(() => typeText(el, text, idx + 1, onComplete), delay);
     } else {
-      resetBtn.classList.remove("hidden");
-      readingArea.scrollIntoView({ behavior: "smooth", block: "end" });
+      if (typeof onComplete === "function") onComplete();
     }
   }
 });

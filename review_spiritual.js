@@ -1666,6 +1666,9 @@ document.addEventListener("DOMContentLoaded", () => {
           card_name: reading.card.name,
           card_position: reading.isReversed ? "reversed" : "upright"
         });
+        // 自社商品枠を表示（7日間ワーク・個人鑑定）
+        const ownArea = document.getElementById("own-products-area");
+        if (ownArea) ownArea.classList.remove("hidden");
         // アフィリエイト枠を表示（カテゴリ別に広告を出し分け）
         const affArea = document.getElementById("affiliate-area");
         const affiliateSlot = document.getElementById("affiliate-slot");
@@ -1696,9 +1699,11 @@ document.addEventListener("DOMContentLoaded", () => {
     drawSection.classList.add("hidden");
     subCatArea.classList.add("hidden");
     mainCatArea.classList.remove("hidden");
-    // アフィリエイト枠を隠す
+    // アフィリエイト枠・自社商品枠を隠す
     const affArea = document.getElementById("affiliate-area");
     if (affArea) affArea.classList.add("hidden");
+    const ownArea = document.getElementById("own-products-area");
+    if (ownArea) ownArea.classList.add("hidden");
     selectedSubId = null;
   });
 
@@ -1786,4 +1791,18 @@ document.addEventListener("DOMContentLoaded", () => {
       if (typeof onComplete === "function") onComplete();
     }
   }
+});
+
+// --- 自社商品ボタンのクリック計測（2026-07-07追加） ---
+document.addEventListener("DOMContentLoaded", () => {
+  [
+    ["own-seven-day-work", "seven_day_work"],
+    ["own-personal-reading", "personal_reading"]
+  ].forEach(([id, product]) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener("click", () => {
+      trackSiteEvent("own_product_click", { site_name: "shimaumatarot", product });
+    });
+  });
 });

@@ -1644,7 +1644,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "reunion": "reunion",
     "unrequited-love": "unrequited",
     "work": "current_job",
-    "today": "fortune_flow",
+    "today": "your_energy",
     "husband-feelings": "marriage",
     "husband-affair": "marriage",
     "marriage-repair": "marriage",

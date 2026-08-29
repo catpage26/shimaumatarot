@@ -1652,7 +1652,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "his-cooled-feelings": "his_feelings",
     "turning-point": "turning_point",
     "job-crossroads": "current_job",
-    "restart-life": "job_change",
+    "restart-life": "fortune_flow",
     "soul-mission": "soul_mission",
     "needed-message": "needed_message",
     "guardian-message": "guardian",

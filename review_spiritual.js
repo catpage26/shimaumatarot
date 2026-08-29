@@ -1448,7 +1448,7 @@ function createPersonalReadingCta(params = {}) {
 
   const desc = document.createElement("p");
   desc.className = "personal-reading-desc";
-  desc.textContent = "恋愛、人間関係、仕事、これからの流れまで、しまうまタロットが個別に鑑定します。";
+  desc.textContent = "YouTubeで8万人が聴いているリーディングと同じ読み方で、恋愛、人間関係、仕事、これからの流れまで個別に鑑定します。";
 
   const link = document.createElement("a");
   link.className = "btn-personal-reading";
@@ -1765,6 +1765,20 @@ document.addEventListener("DOMContentLoaded", () => {
     readingArea.appendChild(textContainer);
     typeText(textContainer, reading.text, 0, () => {
       const parentId = SUB_TO_PARENT[selectedSubId] || "";
+      if (reading.card && reading.card.id) {
+        const detailLink = document.createElement("p");
+        detailLink.className = "card-detail-link";
+        detailLink.style.cssText = "text-align:center;margin:16px 0;";
+        const a = document.createElement("a");
+        a.href = `cards/${reading.card.id}.html`;
+        a.textContent = `${reading.card.name}の意味をもっと詳しく見る`;
+        a.style.cssText = "color:#8e6c9e;font-size:14px;text-decoration:underline;";
+        a.addEventListener("click", () => {
+          trackSiteEvent("card_detail_click", { card_id: reading.card.id });
+        });
+        detailLink.appendChild(a);
+        readingArea.appendChild(detailLink);
+      }
       readingArea.appendChild(createPersonalReadingCta({
         site_name: "shimaumatarot",
         category_id: parentId,

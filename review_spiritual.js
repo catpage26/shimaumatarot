@@ -1280,7 +1280,7 @@ const COCONALA_PRODUCT_AD = {
   },
   goods: {
     ejp: "h" + "ttps://coconala.com/categories/3?service_kind=1",
-    imu: "恋愛の悩みを相談できる電話占い"
+    imu: "恋愛の悩みを相談できる電話占い（ココナラ）"
   }
 };
 
@@ -1293,7 +1293,7 @@ const COCONALA_FEELINGS_PRODUCT_AD = {
   },
   goods: {
     ejp: "h" + "ttps://coconala.com/categories/3?service_kind=1",
-    imu: "相手の気持ちを相談できる電話占い"
+    imu: "相手の気持ちを相談できる電話占い（ココナラ）"
   }
 };
 
@@ -1306,7 +1306,7 @@ const COCONALA_REUNION_PRODUCT_AD = {
   },
   goods: {
     ejp: "h" + "ttps://coconala.com/categories/3?service_kind=1",
-    imu: "復縁の悩みを相談できる電話占い"
+    imu: "復縁の悩みを相談できる電話占い（ココナラ）"
   }
 };
 
@@ -1319,7 +1319,7 @@ const COCONALA_COMPLEX_PRODUCT_AD = {
   },
   goods: {
     ejp: "h" + "ttps://coconala.com/categories/3?service_kind=1",
-    imu: "複雑な恋の悩みを相談できる電話占い"
+    imu: "複雑な恋の悩みを相談できる電話占い（ココナラ）"
   }
 };
 
@@ -1332,7 +1332,7 @@ const COCONALA_WORK_PRODUCT_AD = {
   },
   goods: {
     ejp: "h" + "ttps://coconala.com/categories/2?service_kind=1",
-    imu: "仕事や転職の悩みを相談できる電話相談"
+    imu: "仕事や転職の悩みを相談できる電話占い（ココナラ）"
   }
 };
 
@@ -1345,7 +1345,7 @@ const COCONALA_RELATIONSHIP_PRODUCT_AD = {
   },
   goods: {
     ejp: "h" + "ttps://coconala.com/categories/2?service_kind=1",
-    imu: "人間関係や家庭の悩みを相談できる電話相談"
+    imu: "人間関係や家庭の悩みを相談できる電話占い（ココナラ）"
   }
 };
 
@@ -1358,7 +1358,7 @@ const COCONALA_MONEY_PRODUCT_AD = {
   },
   goods: {
     ejp: "h" + "ttps://coconala.com/categories/3?service_kind=1",
-    imu: "お金やこれからの流れを相談できる電話占い"
+    imu: "お金やこれからの流れを相談できる電話占い（ココナラ）"
   }
 };
 
@@ -1371,7 +1371,7 @@ const COCONALA_FLOW_PRODUCT_AD = {
   },
   goods: {
     ejp: "h" + "ttps://coconala.com/categories/3?service_kind=1",
-    imu: "今後の流れや不安を相談できる電話占い"
+    imu: "今後の流れや不安を相談できる電話占い（ココナラ）"
   }
 };
 
@@ -1638,6 +1638,32 @@ document.addEventListener("DOMContentLoaded", () => {
     selectedSubId = null;
   });
 
+  // --- 悩み別ページからの直行（?topic=スラッグでカード引き画面へ） ---
+  const TOPIC_TO_SUB = {
+    "his-feelings": "his_feelings",
+    "reunion": "reunion",
+    "unrequited-love": "unrequited",
+    "work": "current_job",
+    "today": "fortune_flow",
+    "husband-feelings": "marriage",
+    "husband-affair": "marriage",
+    "marriage-repair": "marriage",
+    "no-contact": "his_feelings",
+    "his-cooled-feelings": "his_feelings"
+  };
+  const topicParam = new URLSearchParams(location.search).get("topic");
+  if (topicParam && TOPIC_TO_SUB[topicParam]) {
+    const targetSubId = TOPIC_TO_SUB[topicParam];
+    for (const [catId, cat] of Object.entries(CATEGORIES)) {
+      const sub = (cat.subs || []).find(s => s.id === targetSubId);
+      if (sub) {
+        showSubCategories(catId);
+        selectSubCategory(sub.id, sub.label, cat.emoji);
+        break;
+      }
+    }
+  }
+
   // --- カードを引く ---
   drawBtn.addEventListener("click", (event) => {
     event.preventDefault();
@@ -1666,9 +1692,6 @@ document.addEventListener("DOMContentLoaded", () => {
           card_name: reading.card.name,
           card_position: reading.isReversed ? "reversed" : "upright"
         });
-        // 自社商品枠を表示（7日間ワーク・個人鑑定）
-        const ownArea = document.getElementById("own-products-area");
-        if (ownArea) ownArea.classList.remove("hidden");
         // アフィリエイト枠を表示（カテゴリ別に広告を出し分け）
         const affArea = document.getElementById("affiliate-area");
         const affiliateSlot = document.getElementById("affiliate-slot");
@@ -1702,8 +1725,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // アフィリエイト枠・自社商品枠を隠す
     const affArea = document.getElementById("affiliate-area");
     if (affArea) affArea.classList.add("hidden");
-    const ownArea = document.getElementById("own-products-area");
-    if (ownArea) ownArea.classList.add("hidden");
     selectedSubId = null;
   });
 

@@ -1448,7 +1448,7 @@ function createPersonalReadingCta(params = {}) {
 
   const desc = document.createElement("p");
   desc.className = "personal-reading-desc";
-  desc.textContent = "YouTubeで8万人が聴いているリーディングと同じ読み方で、恋愛、人間関係、仕事、これからの流れまで個別に鑑定します。";
+  desc.textContent = "YouTubeで8万人が聴いているリーディングと同じ読み方で個別に鑑定します。鑑定実績1,000件以上・評価5.0。";
 
   const link = document.createElement("a");
   link.className = "btn-personal-reading";

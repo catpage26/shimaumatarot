@@ -1649,7 +1649,14 @@ document.addEventListener("DOMContentLoaded", () => {
     "husband-affair": "marriage",
     "marriage-repair": "marriage",
     "no-contact": "his_feelings",
-    "his-cooled-feelings": "his_feelings"
+    "his-cooled-feelings": "his_feelings",
+    "turning-point": "turning_point",
+    "job-crossroads": "current_job",
+    "restart-life": "job_change",
+    "soul-mission": "soul_mission",
+    "needed-message": "needed_message",
+    "guardian-message": "guardian",
+    "work-relations": "work_relations"
   };
   const topicParam = new URLSearchParams(location.search).get("topic");
   if (topicParam && TOPIC_TO_SUB[topicParam]) {
